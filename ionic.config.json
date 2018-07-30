@@ -1,8 +1,8 @@
 {
   "name": "meuApp",
-  "app_id": "3930d45c",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "3930d45c"
 }

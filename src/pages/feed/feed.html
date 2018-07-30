@@ -15,38 +15,38 @@
 
 <ion-content padding>
 
-<ion-card>
+<ion-card *ngFor="let filme of lista_filmes"> <!-- Cria um loop pra cada item necessário com essa formatação html, através de uma váriavel que pega cada elemento da lista de filmes -->
 
   <ion-item>
     <ion-avatar item-start>
       <img src="assets/imgs/gato.png">
     </ion-avatar>
-    <h2 class="feed-title">{{nome_usuario}}</h2> <!-- Interpolação no Angular, onde ele percebe que precisa buscar/executar essa var dentro de {{}} -->
-    <p class="feed-date">November 5, 1955</p>
+    <h2 class="feed-title">{{ filme.original_title }}</h2> <!-- Interpolação no Angular, onde ele percebe que precisa buscar/executar essa var dentro de {{}} -->
+    <p class="feed-date">{{ filme.release_date }}</p>
   </ion-item>
 
-  <img src="assets/imgs/gatinhos.jpg">
+  <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path"> 
 
   <ion-card-content>
-    <p>Me and my brother s2</p>
+    <p>{{ filme.overview }}</p>
   </ion-card-content>
 
   <ion-row>
     <ion-col>
       <button ion-button icon-start clear small>
         <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
+        <div>{{ objeto_feed.likes }} likes</div>
       </button>
     </ion-col>
     <ion-col>
       <button ion-button icon-start clear small>
         <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
+        <div>{{ objeto_feed.comments }} comments</div>
       </button>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        11h ago
+        {{ objeto_feed.time_comment }}
       </ion-note>
     </ion-col>
   </ion-row>
