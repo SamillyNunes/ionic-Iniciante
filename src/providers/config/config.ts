@@ -7,11 +7,12 @@ let config_key_name = "config";
 @Injectable()
 export class ConfigProvider {
   
-  private config = { // Variável do tipo obj que tem alguns atributos
+  // Variável do tipo obj que tem alguns atributos
+  /*private config = { 
     showSLide: false,
     name: "",
     username: ""
-  }
+  }*/
 
   constructor() {
    

@@ -20,4 +20,8 @@ export class MovieProvider {
     return this.http.get(this.baseApiPath +"/movie/popular?api_key=2577d69700e36a4e7443e6b54b6f6a4b") //retorna a requisição da url do bd que eu quis(últimos filmes) com a chave que eu tenho
   }
 
+  getMoviesDetails(filmeid) { //Função pra pegar requisição dos últimos filmes criada por mim
+    return this.http.get(this.baseApiPath + `/movie/${filmeid}?api_key=2577d69700e36a4e7443e6b54b6f6a4b`) //retorna a requisição da url do bd que eu quis(últimos filmes) com a chave que eu tenho
+  }
+
 }
